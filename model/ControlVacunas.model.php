@@ -1,6 +1,6 @@
 <?php
 class ControlVacunas{
-    public $Mascota_id;
-    public $Vacuna_id;
-    public $fecha;
+    public int $Mascota_id;
+    public int $Vacuna_id;
+    public int $fecha;
 }

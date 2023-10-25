@@ -1,10 +1,10 @@
 <?php
 class user{
-    public $id;
-    public $nombre;
-    public $username;
-    public $email;
-    private $password;
-    public $Role_id;
-    public $foto;
+    public int $id;
+    public string $nombre;
+    public string $username;
+    public string $email;
+    private string $password;
+    public int $Role_id;
+    public string $foto;
 }

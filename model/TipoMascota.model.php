@@ -1,7 +1,7 @@
 <?php
 class TipoMascota {
-    public $id;
-    public $nombre;
-    public $EdEquivalenteJoven;
-    public $EdEquivalenteAdulto;
+    public int  $id;
+    public string $nombre;
+    public int $EdEquivalenteJoven;
+    public int $EdEquivalenteAdulto;
 }

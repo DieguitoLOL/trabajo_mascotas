@@ -1,10 +1,10 @@
 <?php
 class mascotas{
-    public $id;
-    public $nombre;
-    public $FechaNacimiento;
-    public $foto;
-    public $User_id;
-    public $TipoMascota_id;
-    public $Raza_id;
+    public int $id;
+    public string $nombre;
+    public datetime $FechaNacimiento;
+    public string $foto;
+    public int $User_id;
+    public int $TipoMascota_id;
+    public int $Raza_id;
 }
