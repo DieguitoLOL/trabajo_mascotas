@@ -7,7 +7,7 @@ class UserController extends Conexion {
        $mysqlA = $this->conectar();
        $nombre = $mysqlA -> real_escape_string($user->nombre);
 
-       $sql = "INSERT INTO gender (nombre) VALUES ('$nombre')";
+       $sql = "INSERT INTO User (nombre) VALUES ('$nombre')";
        $mysqlA->close();
        return $sql;
     }
