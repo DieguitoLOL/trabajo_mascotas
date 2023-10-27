@@ -10,8 +10,11 @@
             $nombre = $conexion->real_escape_string($_POST["nombre"]);
             $sql ="select * from user where username = '$nombre'";
             $consulta = $conexion->query($sql);
-            if($conexion->query($sql)){
+            if($consulta -> num_rows > 0){
                 echo "<div style='background-color: blue;' class='stylos'>Usuario en uso</div>". "</br>";
+            }
+            else{
+                
             }
         }
       
