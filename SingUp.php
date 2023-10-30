@@ -21,8 +21,8 @@
                 require_once __DIR__ ."/process/procesar_registro.php";
             ?>   
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" value="<?php if(isset($_POST["nombre"])){echo $_POST["nombre"];}else{ echo "";}?>""><br>
+        <label for="UserName">Nombre de Usuario</label>
+        <input type="text" id="UserName" name="UserName" value="<?php if(isset($_POST["UserName"])){echo $_POST["UserName"];}else{ echo "";}?>"><br>
 
         <label for="email">Correo Electrónico:</label>
         <input type="email" id="email" name="email" value="<?php if(isset($_POST["email"])){echo $_POST["email"];}else{ echo "";}?>"><br>

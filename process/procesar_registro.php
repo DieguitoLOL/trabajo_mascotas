@@ -1,22 +1,9 @@
 <?php 
-    require_once(__DIR__ ."/../controller/conexiones.php");   
-    if(isset($_POST["btRegister"])){
-        if(empty($_POST["nombre"]) or  empty($_POST["email"])or empty($_POST["contrasena"])){
-
-            echo "<div style='background-color: red;' class='stylos'>campos vacios</div>". "</br>";
-        }else{
-            echo "<div style='background-color: green;' class='stylos'>campos llenos</div>". "</br>";
-            $conexion = (new Conexion) ->conectar();
-            $nombre = $conexion->real_escape_string($_POST["nombre"]);
-            $sql ="select * from user where username = '$nombre'";
-            $consulta = $conexion->query($sql);
-            if($consulta -> num_rows > 0){
-                echo "<div style='background-color: blue;' class='stylos'>Usuario en uso</div>". "</br>";
-            }
-            else{
-                
-            }
-        }
-      
+session_start();
+if (!isset($_SESSION["message_error"]) and $_SESSION["message_duplicate"] and !empty($_POST["btRegister"])) {
+    if (empty($_POST["UserName"]) or empty($_POST["email"]) or empty($_POST["contrasena"])) {
+        $_SESSION["mesage_error"] = "Faltan campos";
+    }else{
+        $UserControler = new UserController();
     }
-?>
+}
