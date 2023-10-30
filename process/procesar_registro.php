@@ -5,5 +5,6 @@ if (!isset($_SESSION["message_error"]) and $_SESSION["message_duplicate"] and !e
         $_SESSION["mesage_error"] = "Faltan campos";
     }else{
         $UserControler = new UserController();
+        echo "";
     }
 }
