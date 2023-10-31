@@ -1,5 +1,5 @@
 -- MySQL Workbench Forward Engineering
-
+drop database if exists base_datos;
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
@@ -68,11 +68,11 @@ ENGINE = InnoDB;
 -- Table `base_datos`.`User`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `base_datos`.`User` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL auto_increment,
   `nombre` VARCHAR(45) NULL,
   `username` VARCHAR(45) NULL,
   `email` VARCHAR(45) NULL,
-  `password` VARCHAR(45) NULL,
+  `password` VARCHAR(250) NULL,
   `Role_id` INT NOT NULL,
   `foto` BLOB NULL,
   PRIMARY KEY (`id`),
@@ -142,7 +142,9 @@ CREATE TABLE IF NOT EXISTS `base_datos`.`ControlVacuna` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
+-- SELECT * from User;
+-- SELECT * FROM  `base_datos`.`User` WHERE `base_datos`.`username` == username or email == $email;
+-- select * from User;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
