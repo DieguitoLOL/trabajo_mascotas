@@ -1,0 +1,84 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+  
+ /* body {
+    margin: 0;
+    padding: 0;
+    background-image: url("kitten.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .login-page {
+    width: 360px;
+    margin: auto;
+  }
+  
+  .form {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .login-header {
+    text-align: center;
+  }
+  
+  .login-header h3 {
+    color: #04AA6D;
+    margin-bottom: 10px;
+  }
+  
+  .login-header p {
+    color: #999;
+    margin-bottom: 20px;
+  }
+  
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .message {
+    color: #999;
+    text-align: center;
+  }
+  
+  .message a {
+    color: #04AA6D;
+  }
+  
+  @media screen and (max-width: 400px) {
+    
+    .login-page {
+      width: 300px;
+    }
+  
+  } */
+
+  

@@ -142,9 +142,10 @@ CREATE TABLE IF NOT EXISTS `base_datos`.`ControlVacuna` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+insert into Role value ("1","user"),("2", "Admin");
 -- SELECT * from User;
--- SELECT * FROM  `base_datos`.`User` WHERE `base_datos`.`username` == username or email == $email;
--- select * from User;
+-- SELECT * FROM  User WHERE username == 'username' or  email == 'email';
+-- select * from Role;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
