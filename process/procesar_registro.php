@@ -15,9 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["btRegister"])) {
     $checkQuery = "SELECT * FROM User WHERE nombre= '$nombre' or username = '$username' or email = '$email'";
     $result = $conn -> query($checkQuery);
     if ($result -> num_rows > 0) {
-        echo"usuario en uso";
+        echo"<script>alert('Este usuario ya existe');</script>";
     }
     else {
+        echo"<script>alert('Usuario creado con exito');</script>";
         (new UserController) ->create($userModel);
         $conn->close();
     }
