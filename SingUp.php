@@ -50,7 +50,8 @@
     </section>
     <section class="seccion_contenido">
         <div class="seccion_contenido-img"><img class="imagen_contenido" src="img/ImagenGato.jpeg" alt="Imagen gatito"></div>
-        <div class="seccion_contenido-text">
+        <div class="seccion_contenido-text"></div>
+        <div class="seccion-contenido_textalineado">
             <h4>LifePet</h4>
             <p>En LifePet, hacemos que las sonrisas de tus mascotas sean nuestra especialidad. Tu confianza, su felicidad.</p>
         </div>
