@@ -4,81 +4,114 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-  
- /* body {
-    margin: 0;
-    padding: 0;
-    background-image: url("kitten.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .login-page {
-    width: 360px;
-    margin: auto;
-  }
-  
-  .form {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-  }
-  
-  .login-header {
-    text-align: center;
-  }
-  
-  .login-header h3 {
-    color: #04AA6D;
-    margin-bottom: 10px;
-  }
-  
-  .login-header p {
-    color: #999;
-    margin-bottom: 20px;
-  }
-  
-  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  .message {
-    color: #999;
-    text-align: center;
-  }
-  
-  .message a {
-    color: #04AA6D;
-  }
-  
-  @media screen and (max-width: 400px) {
-    
-    .login-page {
-      width: 300px;
-    }
-  
-  } */
 
+h1{
+  font-size: 2vw;
+}
+
+main {
+  display: flex;
+  /* gap: 13vw; */
+  /* justify-content: space-between; */
+  width: 70%;
+  margin: auto;
+  padding: 1.5vw;
+  gap: 4vw;
+}
+
+/* ------Este codigo es del registro------ */
+.seccion_ingreso {
+  /* padding: 2vw; */
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contenido_logo {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.logo {
+  width: 2.5vw;
+}
+
+.texto_logo {
+  font-size: 1.5vw;
+}
+
+.contenido_registro {
+  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15vh;
+}
+
+form {
+  display: grid;
+  row-gap: 3vh;
+  width: 100%;
+}
+
+label {
+  font-size: 1vw;
+  font-weight: 600;
+  padding: 1vh 0px;
+}
+
+.registros{
+  display: grid;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  padding: 0px 0.5vw;
+  display: inline-block;
+  border: 0.1vh solid #ccc;
+  border-radius: 0.6vw;
+  transform: translateY(-50%);
+  background-color: white;
+  width: 29vw;
+  height: 3.5vh;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 1vh 0vh;
+  border: none;
+  cursor: pointer;
+  width: 29vw;
+  font-weight: 700;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+
+
+/* -----Este codigo es de la imagen----- */
+.seccion_contenido{
+
+}
+
+.seccion_contenido-img{
+
+position: relative;
+
+width: 36vw;
+
+height: 100vh;
+}
+
+.imagen_contenido{
+
+}
+
+.seccion_contenido-text{
   
+}
