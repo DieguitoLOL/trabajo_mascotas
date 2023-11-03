@@ -14,6 +14,7 @@
         $dotenv->load();
 ?>
 <main>
+    <div class="contenido_principal">
     <section class="seccion_ingreso">
         <div class="contenido_logo">
             <div><img class="logo" src="img/Logo.png" alt="Logo veterinaria"></div>
@@ -26,12 +27,12 @@
                     require_once __DIR__ ."/process/procesar_registro.php";
                 ?>  
                 <div class="registros">
-                  <label for="Name">Nombre completo</label><br>
+                  <label for="Name">Nombre completo:</label><br>
                   <input type="text" id="Name" name="Name" required value="">
                 </div>
 
                 <div class="registros">
-                  <label for="UserName">Nombre de Usuario</label><br>
+                  <label for="UserName">Nombre de Usuario:</label><br>
                   <input type="text" id="UserName" name="UserName" required value="">
                 </div>
 
@@ -44,7 +45,7 @@
                   <label for="contrasena">Contraseña:</label><br>
                   <input type="password" id="contrasena" name="contrasena" required>
                 </div class="registros"> 
-                <input name="btRegister" type="submit" value="Registrarse">
+                <input class="tamaño-boton" name="btRegister" type="submit" value="Registrarse">
             </form>
         </div>
     </section>
@@ -56,6 +57,7 @@
             <p>En LifePet, hacemos que las sonrisas de tus mascotas sean nuestra especialidad. Tu confianza, su felicidad.</p>
         </div>
     </section>
+    </div>
 </main>
 </body>
 </html>

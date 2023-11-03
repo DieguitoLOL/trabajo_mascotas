@@ -7,7 +7,7 @@ class UserController extends Conexion{
         $user -> nombre = $_POST['Name'];
         $user -> username = $_POST['UserName'];
         $user -> email = $_POST['email'];
-        $user -> password = $_POST['contrasena'];
+        $user -> password = password_hash($_POST['contrasena'], PASSWORD_DEFAULT);
         $sql = "INSERT INTO user (nombre, username, email, password, Role_id) VALUES ('{$user->nombre}','{$user->username}', '{$user->email}', '{$user->password}', '1')";
 
         $result = $conection->query($sql);

@@ -6,9 +6,7 @@
 }
 
 body {
-  width: 70vw;
-  height: 100vh;
-  display: flex;
+background: #d7c2a5;
 }
 
 h1 {
@@ -16,9 +14,16 @@ h1 {
 }
 
 main {
+  width: 90vw;
+  height: 100vh;
   display: flex;
-  width: 41vw;
-  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido_principal{
+  display: flex;
   padding: 0vh 0vh 0vh 4vh;
   gap: 4vw;
   height: 90.3vh;
@@ -26,11 +31,12 @@ main {
   border-top: 0.1vw solid gray;
   border-bottom: 0.1vw solid gray;
   border-left: 0.1vw solid gray;
+  background-color: #f7eeda;
 }
 
 /* ------Este codigo es del registro------ */
 .seccion_ingreso {
-  width: 50vw;
+  width: 35vw;
   height: 74vh;
   display: flex;
   flex-direction: column;
@@ -57,13 +63,21 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5vh;
+}
+
+.contenido_registro-espacio{
   gap: 10vh;
 }
 
 form {
   display: grid;
+  row-gap: 8vh;
+}
+
+.tamaño-formulario{
   row-gap: 3vh;
-  width: 100%;
+
 }
 
 label {
@@ -73,7 +87,9 @@ label {
 }
 
 .registros {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  width: -2vw;
 }
 
 input[type=text],
@@ -81,30 +97,47 @@ input[type=email],
 input[type=password] {
   padding: 0px 0.5vw;
   display: inline-block;
-  border: 0.1vh solid #ccc;
-  border-radius: 0.6vw;
-  transform: translateY(-50%);
+  border: 0.1vw solid #ccc;
   background-color: white;
   width: 35vw;
   height: 4.5vh;
+  font-size: 0.7vw;
+  border-radius: 0.6vw;
 }
 
-input[type=submit] {
-  background-color: #04AA6D;
+.tamaño-boton {
+  background-color: #86a99c;
   color: white;
-  padding: 1vh 0vh;
+  padding: 1.3vh 0vh;
   border: none;
   cursor: pointer;
   width: 35vw;
   font-weight: 700;
   border-radius: 0.6vw;
+  font-size: 0.7vw;
 }
 
 input[type=submit]:hover {
   opacity: 0.8;
 }
 
+.contenido_registro-botones{
+  display: flex;
+  justify-content: space-around;
+}
 
+.menos-tamaño{
+  
+width: 14vw;
+  
+display: flex;
+  
+justify-content: center;
+  
+text-decoration: none;
+  
+padding: 1.7vh 0vh;
+}
 
 /* -----Este codigo es de la imagen----- */
 .seccion_contenido {
@@ -113,9 +146,6 @@ input[type=submit]:hover {
   height: 85vh;
   flex-direction: column;
   justify-content: end;
-}
-
-.seccion_contenido-img {
 }
 
 .imagen_contenido {
@@ -139,7 +169,7 @@ input[type=submit]:hover {
   padding: 1vh 1vw;
   opacity: 0.5;
   z-index: 1;
-  filter: blur(1px);
+  filter: blur(0.2vh);
   border-radius: 1vw;
 }
 
@@ -163,4 +193,5 @@ h4 {
 
 p {
   color: white;
+  font-size: 0.9vw;
 }

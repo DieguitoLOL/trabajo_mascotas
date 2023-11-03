@@ -13,15 +13,6 @@
         use Dotenv\Dotenv; 
         $dotenv = Dotenv::createImmutable(__DIR__);
         $dotenv->load();
-        
-        $conexion = (new Conexion) ->conectar();
-        if (!($conexion->connect_errno)) {
-            echo "No fallo";
-            header("location:SingUp.php");
-            $conexion ->close();
-        }else{
-            echo $conexion;
-        }
     ?>
 </body>
 </html>
