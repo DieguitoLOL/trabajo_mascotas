@@ -17,7 +17,7 @@
     <div class="contenido_principal">
     <section class="seccion_ingreso">
         <div class="contenido_logo">
-            <div><img class="logo" src="img/Logo.png" alt="Logo veterinaria"></div>
+            <div><img class="logo" src="img/icono_mascota.png" alt="Logo veterinaria"></div>
             <h6 class="texto_logo">LifePet</h6>
         </div>
         <div class="contenido_registro">

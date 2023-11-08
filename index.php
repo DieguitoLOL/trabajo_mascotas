@@ -1,3 +1,10 @@
+<?php
+    require_once __DIR__ . "/vendor/autoload.php";
+    require_once __DIR__ ."/controller/conexiones.php";
+    use Dotenv\Dotenv; 
+    $dotenv = Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,14 +18,14 @@
     <div class="contenido_principal">
     <section class="seccion_ingreso">
         <div class="contenido_logo">
-            <div><img class="logo" src="img/Logo.png" alt="Logo veterinaria"></div>
+            <div><img class="logo" src="img/icono_mascota.png" alt="Logo veterinaria"></div>
             <h6 class="texto_logo">LifePet</h6>
         </div>
         <div class="contenido_registro contenido_registro-espacio">
             <h1>Inicie Sesión</h1>
             <form class="tamaño-formulario" method="POST">    
                 <?php    
-                    require_once __DIR__ ."/process/procesar_registro.php";
+                    require_once __DIR__ ."/process/procesar_login.php";
                 ?>  
 
                 <div class="registros">
@@ -30,7 +37,7 @@
                   <input type="password" id="contrasena" name="contrasena" required>
                 </div class="registros"> 
                 <div class="contenido_registro-botones">
-                <input class="tamaño-boton menos-tamaño" name="btRegister" type="submit" value="Ingrese">
+                <input class="tamaño-boton menos-tamaño" name="btIngreso" type="submit" value="Ingrese">
                 <a class="tamaño-boton menos-tamaño" href="SingUp.php">Registrese</a>
                 </div>
             </form>

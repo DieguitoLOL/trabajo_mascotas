@@ -72,7 +72,7 @@ main {
 
 form {
   display: grid;
-  row-gap: 8vh;
+  row-gap: 3vh;
 }
 
 .tamaño-formulario{
