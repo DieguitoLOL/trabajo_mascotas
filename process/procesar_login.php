@@ -14,9 +14,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["btIngreso"])) {
     $result = $conn -> query($checkQuery);
     
     if ($result -> num_rows > 0) {
-        $user= $result->fetch_object();
-        $password = $user->contraseña;
+        $objet = mysqli_fetch_array($result);
+        // foreach ($result as $key) {
+        //     $password = $key["password"];
+        // }
+        $password = $objet["password"];
         if (password_verify($contraseña, $password)){
+            session_start();
+            $_SESSION["usuario"] = $objet["username"];
+            $_SESSION["rol"] = $objet["Role_id"];
             header("location: PaginaPrincipal.php");
         }else{
             echo "<script>alert('Contraseña incorrecta')</script>";
