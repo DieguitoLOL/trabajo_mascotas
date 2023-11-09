@@ -24,7 +24,7 @@
     //     $longArray = sizeof($row)-1;
     //     for ($i=1; $i <$longArray ; $i++) { 
     //        echo array_keys($row[$i]); //<--
-    //     }
+    //     } uu
 
     //     // foreach ($row as $content) { 
     //     //     echo ($content).'</br>';
