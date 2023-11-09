@@ -6,10 +6,10 @@
     <title>Veterineria LifePet</title>
 </head>
 <body>
-    <?php
+    <!-- <?php
         require_once(__DIR__ ."/controller/user.controller.php");
-        $result = (new UserController) -> reade();
         session_start();
+        $result = (new UserController) -> reade();
         echo "Usuario:: ".$_SESSION["usuario"]."</br>";
     ?>
     <p> Tu rol </p>
@@ -43,9 +43,10 @@
        </div>
     <?php
         }
-    ?>
+    ?>  -->
    
 
 <h1>hola a todos</h1>
+ <a href="GestionVacunas.php">Gestionar vacunas</a>
 </body>
 </html>
