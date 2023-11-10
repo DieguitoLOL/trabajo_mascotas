@@ -1,0 +1,119 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Estilos del encabezado */
+.header {
+    background-color: lightgreen;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  /* Estilos de la barra de búsqueda */
+  .search-bar {
+    width: 60%;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .search-bar input {
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+  }
+  
+  .search-bar button {
+    width: 15%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  /* Estilos del icono de usuario */
+  .user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Aquí va la imagen del usuario */
+    background-image: url("user.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Estilos del cuerpo de la página */
+  .body {
+    display: flex;
+    height: calc(100vh - 80px);
+  }
+  
+  /* Estilos de la barra lateral */
+  .sidebar {
+    width: 15%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .sidebar-item {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    /* Aquí van los iconos de los elementos de la barra lateral */
+    background-image: url("icon.png");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Estilos del contenido principal */
+  .main {
+    width: 85%;
+    padding: 20px;
+    overflow-y: scroll;
+  }
+  
+  /* Estilos de la tabla */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Estilos de la paginación */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .pagination button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: lightgreen;
+  }
+  

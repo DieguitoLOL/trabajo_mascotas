@@ -144,7 +144,6 @@ ENGINE = InnoDB;
 
 insert into Role value ("1","user"),("2", "Admin");
 -- SELECT * from User;
--- SELECT * FROM  User WHERE username == 'username' or  email == 'email';
 -- select * from Role;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
