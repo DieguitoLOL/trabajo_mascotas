@@ -32,7 +32,8 @@
                 <tr> 
                     <th>Nombre</th> 
                     <th>Fecha de registro</th> 
-                    <th>Email</th> <th>Teléfono</th> 
+                    <th>Email</th> 
+                    <th>Teléfono</th> 
                     <th>Opciones</th> 
                 </tr> 
                 <tr> 
