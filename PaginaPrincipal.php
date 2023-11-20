@@ -6,9 +6,9 @@
     <title>Veterineria LifePet</title>
 </head>
 <body>
+<h1>hola a todos</h1>
     <?php
         require_once(__DIR__ ."/controller/user.controller.php");
-        require_once(__DIR__ . "/process/updateUser.php");
         session_start();
         $result = (new UserController) -> reade();
         echo "Usuario:: ".$_SESSION["usuario"]."</br>";
@@ -36,7 +36,11 @@
     <?php
       foreach ($result as $row) {
     ?>
-       <form action ="./process/updateUser.php" method="POST" id="editarForm">
+       <form method="POST" id="editarForm">
+        <?php 
+            require_once(__DIR__ . "/process/update_user.php");
+            require_once(__DIR__ ."/process/delete_user.php")
+        ?>
         <th><?= $row['id'] ?><input type="hidden" name="id" value="<?= $row['id'] ?>"></th>
         <th><input type="text" name="name" value="<?= $row['nombre'] ?>"></th>
         <th><input type="text" name="username" value="<?= $row['username'] ?>"></th>
@@ -55,7 +59,6 @@
     ?> 
    
 
-<h1>hola a todos</h1>
  <a href="GestionVacunas.php">Gestionar vacunas</a>
 </body>
 </html>

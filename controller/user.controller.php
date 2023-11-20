@@ -25,18 +25,16 @@ class UserController extends Conexion{
             return false;
         }
     }
-    
-
     public function reade(){
         $conection = $this->conectar();
         $sql ="SELECT * from User";
         $result = $conection->query($sql);
         return $result;
     }
-    public function delete(user $user){
-        $conect = $this->conectar();
-        $sql = "DELETE FROM User WHERE id='{$user->id}'";
-        $result = $conect->query($sql);
+    public function delete (User $user) {
+        $connection = $this->conectar();
+        $sql = "DELETE FROM User Where id='{$user->id}'";
+        $result = $connection->query($sql);
         return $result;
     }
 }
