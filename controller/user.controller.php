@@ -13,17 +13,19 @@ class UserController extends Conexion{
         $result = $conection->query($sql);
         return $result;
     }
-    public function update(user $user, $id){
-        $conection = $this->conectar();
-        $user -> nombre = $_POST['Name'];
-        $user -> username = $_POST['UserName'];
-        $user -> email = $_POST['email'];
-        $user -> password = $_POST['contrasena'];
-        $sql = "UPDATE user SET nombre='{$user->nombre}', username='{$user->username}', email='{$user->email}', password='{$user->password}' where id=$id";
+    public function update(user $user) {
+        $connection = $this->conectar();
+        $sql = "UPDATE user SET username = '{$user->username}', email = '{$user->email}' WHERE id = '{$user->id}';";
 
-        $result = $conection->query($sql);
-        return $result;
+        $resultado = $connection->query($sql);
+
+        if ($resultado) {
+            return true;
+        } else {
+            return false;
+        }
     }
+    
 
     public function reade(){
         $conection = $this->conectar();
@@ -31,7 +33,10 @@ class UserController extends Conexion{
         $result = $conection->query($sql);
         return $result;
     }
-    public function delete(){
-
+    public function delete(user $user){
+        $conect = $this->conectar();
+        $sql = "DELETE FROM User WHERE id='{$user->id}'";
+        $result = $conect->query($sql);
+        return $result;
     }
 }

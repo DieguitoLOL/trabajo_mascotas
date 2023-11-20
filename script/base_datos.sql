@@ -143,6 +143,7 @@ CREATE TABLE IF NOT EXISTS `base_datos`.`ControlVacuna` (
 ENGINE = InnoDB;
 
 -- insert into Role value ("1","user"),("2", "Admin");
+-- SHOW TABLES LIKE 'roles';
 -- SELECT * from User;
 -- select * from Role;
 SET SQL_MODE=@OLD_SQL_MODE;
