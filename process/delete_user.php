@@ -17,5 +17,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' and isset($_POST["BtnEliminar"])) {
     } else {
         echo "Error al eliminar al usuario";
     }
-
 }

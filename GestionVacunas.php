@@ -16,7 +16,7 @@
 </head>
 <body> 
     <header class="header"> 
-        
+        <a href="GestionMascotas.php"><button>Agregar mascotas</button></a>
     </header> 
     <div class="body"> 
         <div class="sidebar"> 

@@ -66,8 +66,15 @@ main {
   gap: 5vh;
 }
 
+.contenido-Espacio {
+  height: inherit;
+  padding: 2vh 4vh;
+  border-radius: 1.5vw;
+  border-right: 0.1vw solid gray;
+}
+
 .contenido_registro-espacio{
-  gap: 10vh;
+  gap: 10vh
 }
 
 form {
@@ -94,7 +101,9 @@ label {
 
 input[type=text],
 input[type=email],
-input[type=password] {
+input[type=password],
+select,
+input[type=date]{
   padding: 0px 0.5vw;
   display: inline-block;
   border: 0.1vw solid #ccc;
