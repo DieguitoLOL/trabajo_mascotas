@@ -7,14 +7,13 @@ require_once(__DIR__."/../controller/mascota.controller.php");
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["btnRegistrar"])) {
     $conn = Conexion::conectar();
     $mascotaModel = new mascotas();
-
+    
     $namePet = $conn -> real_escape_string($_POST['NamePet']);
-    $timePet = $conn -> $_POST['Datetime'];
-    $nombre = $conn -> real_escape_string($_POST["nombre"]);
-    $tipo_mascota = $conn -> $_POST['SelectorMascota'];
+    $timePet = $_POST['Datetime'];
+    $tipo_mascota = $conn ->real_escape_string($_POST['SelectorMascota']);
     $raza = $conn -> real_escape_string($_POST['TipoRaza']);
 
-    $checkQuery = "SELECT * FROM mascotas WHERE nombre = '$namePet' and FechaNacimiento = '$timePet' and User_id = '$nombre' and TipoMascota_id = '$tipo_mascota' and Raza_id = '$raza'";
+    $checkQuery = "SELECT * FROM Mascota WHERE nombre = '$namePet' or FechaNacimiento = '$timePet' or TipoMascota_id = '$tipo_mascota' or Raza_id = '$raza'";
     $result = $conn -> query($checkQuery);
 
     if ($result -> num_rows > 0) {

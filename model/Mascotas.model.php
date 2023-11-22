@@ -2,7 +2,7 @@
 class mascotas{
     public int $id;
     public string $nombre;
-    public datetime $FechaNacimiento;
+    public $FechaNacimiento;
     public string $foto;
     public int $User_id;
     public int $TipoMascota_id;

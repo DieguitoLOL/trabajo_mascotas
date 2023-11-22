@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["btIngreso"])) {
             session_start();
             $_SESSION["usuario"] = $objet["username"];
             $_SESSION["rol"] = $objet["Role_id"];
+            $_SESSION["User_id"] = $user->id;
             header("location: PaginaPrincipal.php");
         }else{
             echo "<script>alert('Contraseña incorrecta')</script>";

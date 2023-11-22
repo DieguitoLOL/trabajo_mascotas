@@ -28,7 +28,7 @@ ENGINE = InnoDB;
 -- Table `base_datos`.`TipoMascota`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `base_datos`.`TipoMascota` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL auto_increment,
   `nombre` VARCHAR(150) NULL,
   `EdadEquivalenteJoven` INT NULL,
   `EdadEquivalenteAdulto` INT NULL,
@@ -143,9 +143,14 @@ CREATE TABLE IF NOT EXISTS `base_datos`.`ControlVacuna` (
 ENGINE = InnoDB;
 
 insert into Role value ("1","user"),("2", "Admin");
+insert into TipoMascota (nombre) value ("perro"),("gato"),("raton"),("pez"),("Hamster");
+
 -- SHOW TABLES LIKE 'roles';
 -- SELECT * from User;
+-- select * from TipoMascota;
 -- select * from Role;
+-- select * from Mascota;
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
