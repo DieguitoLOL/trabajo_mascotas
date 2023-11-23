@@ -1,2 +1,2 @@
-ErrorDocument 404 http://localhost/trabajo_mascotas/404.php
-ErrorDocument 403 http://localhost/trabajo_mascotas/403.php
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php

@@ -15,6 +15,11 @@
     ?>
 </head>
 <body> 
+    <?php
+        require_once(__DIR__ ."/controller/mascota.controller.php");
+        session_start();
+        $result = (new MascotaController) -> reade();
+    ?>
     <header class="header"> 
         <a href="GestionMascotas.php"><button>Agregar mascotas</button></a>
     </header> 
@@ -24,26 +29,28 @@
             <div class="sidebar-item"></div> 
             <div class="sidebar-item"></div>
             <div class="sidebar-item"></div> 
-        </div> <div class="main"> 
+        </div> <div class="main">     
             <table class="table"> 
                 <tr> 
                     <th>Nombre</th> 
-                    <th>Tipo de mascota</th>
-                    <th>Nombre del usuario o dueño</th>
-                    <th>Raza</th>
                     <th>Fecha de nacimiento</th>
-                    <th>Cantidad de vacunas</th>
-                    <th>Tipo de vacuna</th>
+                    <th>Nombre del usuario o dueño</th>
+                    <th>Tipo de mascota</th>
+                    <th>Raza</th>
                 </tr> 
+                <?php
+                    foreach ($result as $row) {
+                ?> 
                 <tr> 
-                    
+                    <th><input type="text" name="name" value="<?= $row['Nombre_mascota'] ?>"></th>
+                    <th><input type="text" name="time" value="<?= $row['FechaNacimiento'] ?>"></th>
+                    <th><input type="text" name="time" value="<?= $row['Nombre_USER'] ?>"></th>
+                    <th><input type="text" name="time" value="<?= $row['Tipo_mascota'] ?>"></th>
+                    <th><input type="text" name="time" value="<?= $row['Nombre_raza'] ?>"></th>
                 </tr> 
-                <tr> 
-                    
-                </tr> 
-                <tr> 
-                    
-                </tr> 
+                <?php
+                    }
+                ?> 
             </table> 
         </div> 
     </div> 

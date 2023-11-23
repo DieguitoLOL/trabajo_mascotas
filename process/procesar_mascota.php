@@ -17,12 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["btnRegistrar"])) {
     $checkQuery = "SELECT * FROM Mascota WHERE nombre = '$namePet' or FechaNacimiento = '$timePet' or User_id = '$username' or TipoMascota_id = '$tipo_mascota' or Raza_id = '$raza'";
     $result = $conn -> query($checkQuery);
 
-    if ($result -> num_rows > 0) {
-        echo"<script>alert('Este registro ya existe, vuelva a la pantalla de vacunas');</script>";
-    }
-    else {
+    if ($result) {
         (new MascotaController) ->create($mascotaModel);
         $conn->close();
-        header("location: index.php");
+        header("location: GestionVacunas.php");
     }
 }
