@@ -29,6 +29,7 @@
                 <tr> 
                     <th>Nombre</th> 
                     <th>Tipo de mascota</th>
+                    <th>Nombre del usuario o dueño</th>
                     <th>Raza</th>
                     <th>Fecha de nacimiento</th>
                     <th>Cantidad de vacunas</th>

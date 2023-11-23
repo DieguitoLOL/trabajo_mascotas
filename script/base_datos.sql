@@ -41,7 +41,7 @@ ENGINE = InnoDB;
 -- Table `base_datos`.`Raza`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `base_datos`.`Raza` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL auto_increment,
   `nombre` VARCHAR(150) NULL,
   `TipoMascota_id` INT NOT NULL,
   PRIMARY KEY (`id`),
@@ -91,7 +91,7 @@ ENGINE = InnoDB;
 -- Table `base_datos`.`Mascota`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `base_datos`.`Mascota` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL auto_increment,
   `nombre` VARCHAR(150) NULL,
   `FechaNacimiento` DATETIME NULL,
   `foto` BLOB NULL,
@@ -143,11 +143,14 @@ CREATE TABLE IF NOT EXISTS `base_datos`.`ControlVacuna` (
 ENGINE = InnoDB;
 
 insert into Role value ("1","user"),("2", "Admin");
-insert into TipoMascota (nombre) value ("perro"),("gato"),("raton"),("pez"),("Hamster");
+insert into TipoMascota (nombre) value ("Otro"),("perro"),("gato"),("raton"),("pez"),("Hamster");
+ALTER TABLE Raza MODIFY TipoMascota_id INT NOT NULL DEFAULT 0;
+insert into Raza (nombre) value ("Otro"),("Grande"),("Mediano"),("Pequeño");
 
 -- SHOW TABLES LIKE 'roles';
 -- SELECT * from User;
 -- select * from TipoMascota;
+-- select * from Raza;
 -- select * from Role;
 -- select * from Mascota;
 

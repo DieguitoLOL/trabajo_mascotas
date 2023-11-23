@@ -4,7 +4,7 @@ class mascotas{
     public string $nombre;
     public $FechaNacimiento;
     public string $foto;
-    public int $User_id;
-    public int $TipoMascota_id;
-    public int $Raza_id;
+    public string $User_id;
+    public string $TipoMascota_id;
+    public string $Raza_id;
 }

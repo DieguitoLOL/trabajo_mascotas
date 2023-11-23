@@ -27,7 +27,6 @@
                 <?php    
                     require_once __DIR__ ."/process/procesar_mascota.php";
                 ?>  
-
                 <div class="registros">
                   <label for="NamePet">Nombre de la mascota:</label><br>
                   <input type="text" id="NamePet" name="NamePet" required value="">
@@ -36,24 +35,60 @@
                   <label for="Datetime">Fecha de nacimiento:</label><br>
                   <input type="date" id="Datetime" name="Datetime" required value="">
                 </div>   
+                <?php
+                  require_once(__DIR__ ."/controller/user.controller.php");
+                  $result = (new UserController) -> reade();
+                ?>
                 <div class="registros">
-                  <label for="Username">Nombre de usuario:</label><br>
-                  <input type="text" id="Username" name="Username2" required value="">
+                  <label for="TipoMascota">Nombre de usuario:</label><br>
+                  <select name="SelectorUsuario" id="mascota">
+                    <option value=""></option>
+                      <?php 
+                        foreach ($result as $row) {
+                      ?>
+                      <option value="<?= $row['id'] ?>" > 
+                        <?= $row['username'] ?> 
+                      </option>
+                      <?php 
+                        }
+                      ?>
+                  </select>
                 </div>
+                <?php
+                  require_once(__DIR__ ."/controller/TipoMascota.controller.php");
+                  $result = (new TipoMascotaController) -> reade();
+                ?>
                 <div class="registros">
                   <label for="TipoMascota">Tipo de mascota:</label><br>
                   <select name="SelectorMascota" id="mascota">
-                    <option value=""></option>
-                    <option value="1">Perro</option>
-                    <option value="2">Gato</option>
-                    <option value="3">Raton</option>
-                    <option value="4">Pez</option>
-                    <option value="5">Hamster</option>
+                    <?php 
+                      foreach ($result as $row) {
+                    ?>
+                    <option value="<?= $row['id']?>">
+                      <?= $row['nombre'] ?>
+                    </option>
+                    <?php 
+                      }
+                    ?>
                   </select>
-                </div>  
+                </div>
+                <?php
+                  require_once(__DIR__ ."/controller/raza.controller.php");
+                  $result = (new TipoRazaController) -> reade();
+                ?>
                 <div class="registros">
                   <label for="TipoRaza">Tipo de raza:</label><br>
-                  <input type="text" id="TipoRaza" name="TipoRaza" required value="">
+                  <select name="SelectorRaza" id="mascota">
+                    <?php 
+                      foreach ($result as $row) {
+                    ?>
+                    <option value="<?= $row['id']?>">
+                      <?= $row['nombre'] ?>
+                    </option>
+                    <?php 
+                      }
+                    ?>
+                  </select>
                 </div>            
                 <div class="contenido_registro-botones">
                 <input class="tamaño-boton menos-tamaño" name="btnRegistrar" type="submit" value="Registre su mascota">

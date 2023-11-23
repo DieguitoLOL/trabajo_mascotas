@@ -10,10 +10,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["btnRegistrar"])) {
     
     $namePet = $conn -> real_escape_string($_POST['NamePet']);
     $timePet = $_POST['Datetime'];
+    $username = $conn ->real_escape_string($_POST['SelectorUsuario']);
     $tipo_mascota = $conn ->real_escape_string($_POST['SelectorMascota']);
-    $raza = $conn -> real_escape_string($_POST['TipoRaza']);
+    $raza = $conn ->real_escape_string($_POST['SelectorRaza']);
 
-    $checkQuery = "SELECT * FROM Mascota WHERE nombre = '$namePet' or FechaNacimiento = '$timePet' or TipoMascota_id = '$tipo_mascota' or Raza_id = '$raza'";
+    $checkQuery = "SELECT * FROM Mascota WHERE nombre = '$namePet' or FechaNacimiento = '$timePet' or User_id = '$username' or TipoMascota_id = '$tipo_mascota' or Raza_id = '$raza'";
     $result = $conn -> query($checkQuery);
 
     if ($result -> num_rows > 0) {
