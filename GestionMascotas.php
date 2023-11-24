@@ -42,7 +42,6 @@
                 <div class="registros">
                   <label for="TipoMascota">Nombre de usuario:</label><br>
                   <select name="SelectorUsuario" id="mascota">
-                    <option value=""></option>
                       <?php 
                         foreach ($result as $row) {
                       ?>

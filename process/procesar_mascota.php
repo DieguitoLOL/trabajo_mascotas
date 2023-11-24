@@ -20,6 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["btnRegistrar"])) {
     if ($result) {
         (new MascotaController) ->create($mascotaModel);
         $conn->close();
-        header("location: GestionVacunas.php");
+        header("location: MostrarMascotas.php");
     }
 }

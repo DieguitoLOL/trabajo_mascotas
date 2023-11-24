@@ -44,8 +44,13 @@
         <th><?= $row['id'] ?><input type="hidden" name="id" value="<?= $row['id'] ?>"></th>
         <th><input type="text" name="name" value="<?= $row['nombre'] ?>"></th>
         <th><input type="text" name="username" value="<?= $row['username'] ?>"></th>
-        <th><input type="text" readonly name="password" value="<?= $row['Role_id'] ?>"></th>
+        <th><input type="text" readonly name="role" value="<?= $row['Role_id'] ?>"></th>
         <th><input type="text" name="email" value="<?= $row['email'] ?>"></th>
+        <?php 
+        
+        ?>
+            <th></th>
+
          <!-- <p><?php echo $row['nombre']?></p>
          <p><?php echo $row['username']?></p>
          <p><?php echo $row['Role_id']?></p>
@@ -59,6 +64,6 @@
     ?> 
    
 
- <a href="GestionVacunas.php">Gestionar vacunas</a>
+ <a href="MostrarMascotas.php">Listado de Mascotas</a>
 </body>
 </html>

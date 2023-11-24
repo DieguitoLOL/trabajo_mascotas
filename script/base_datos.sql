@@ -142,10 +142,17 @@ CREATE TABLE IF NOT EXISTS `base_datos`.`ControlVacuna` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+select m.nombre as Nombre_mascota, m.FechaNacimiento, u.nombre as Nombre_dueño, t.nombre as Tipo_mascota, r.nombre as Nombre_raza
+from mascota  m 
+join User u on m.User_id = u.id
+join TipoMascota t on m.TipoMascota_id = t.id
+join Raza r on m.Raza_id = r.id;
+
+
 insert into Role value ("1","user"),("2", "Admin");
 insert into TipoMascota (nombre) value ("Otro"),("perro"),("gato"),("raton"),("pez"),("Hamster");
-ALTER TABLE Raza MODIFY TipoMascota_id INT NOT NULL DEFAULT 0;
-insert into Raza (nombre) value ("Otro"),("Grande"),("Mediano"),("Pequeño");
+ALTER TABLE Raza MODIFY TipoMascota_id INT DEFAULT 0;
+insert into Raza (id, nombre) value ("1","Otro"),("2","Grande"),("3","Mediano"),("4","Pequeño");
 
 -- SHOW TABLES LIKE 'roles';
 -- SELECT * from User;

@@ -4,6 +4,7 @@ require_once(__DIR__ . "/../controller/conexiones.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' and isset($_POST["BtnActualizar"])) {
     $id = $_POST["id"];
+    $name =  isset($_POST["name"]) ? $_POST["name"] : "";
     $username = isset($_POST["username"]) ? $_POST["username"] : "";
     $email = isset($_POST["email"]) ? $_POST["email"] : "";
 
@@ -11,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' and isset($_POST["BtnActualizar"])) {
     $userController = new UserController();
     $user = new User();
     $user->id = $id;
+    $user->nombre = $name;
     $user->username = $username;
     $user->email = $email;
 
@@ -19,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' and isset($_POST["BtnActualizar"])) {
     if ($result) {
         header("Location: PaginaPrincipal.php");
     } else {
-        echo "Error al actualizar al usuario";
+        echo "Error al actualizar el usuario";
     }
 }
 ?>

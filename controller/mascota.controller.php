@@ -16,7 +16,16 @@ class MascotaController extends Conexion{
         
     }
     public function update(mascotas $mascota) {
-        $conection = $this->conectar();
+        $connection = $this->conectar();
+        $sql = "UPDATE Mascota SET username = '{$mascota->nombre}','{$mascota->FechaNacimiento}', '{$mascota->User_id}', '{$mascota->TipoMascota_id}', '{$mascota->Raza_id}') WHERE id = '{$mascota->id}';";
+
+        $resultado = $connection->query($sql);
+
+        if ($resultado) {
+            return true;
+        } else {
+            return false;
+        }
         
     }
     public function reade(){
